@@ -1,0 +1,175 @@
+* {
+  /* box-sizing: border-box; */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(158, 167, 167);
+  height: 100vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#board {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.slot {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.hole {
+  width: 80px;
+  height: 80px;
+  border: 50px solid rgb(106, 90, 205);
+  border-radius: 50%;
+  transform: translate(-40px, -40px);
+}
+
+.player1 {
+  background-color: rgb(195, 0, 0);
+  transition: background-color 0.3s;
+}
+
+.player2 {
+  background-color: rgb(197, 197, 3);
+  transition: background-color 0.3s;
+}
+
+.star {
+  background-image: url(./badge.png);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 1s ease-out;
+}
+
+.btn {
+  display: flex;
+  font-size: 1.5rem;
+  padding: 0.5em 1em;
+  background-color: rebeccapurple;
+  border-radius: 200px;
+  justify-content: space-between;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.reset:hover {
+  background-color: rgb(119, 44, 195);
+}
+
+.btn img {
+  height: 30px;
+  margin-right: 0.5em;
+  transition: transform 1s;
+}
+
+.rotate {
+  transform: rotateZ(360deg);
+}
+
+.players {
+  display: flex;
+  width: 700px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em 0;
+  /* position: relative;  */
+}
+
+.p1,
+.p2 {
+  display: flex;
+  align-items: center;
+}
+
+.current {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 0.5em;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.show {
+  opacity: 1;
+}
+
+.p1 span.current {
+  background-color: rgb(195, 0, 0);
+}
+
+.p2 span.current {
+  background-color: rgb(197, 197, 3);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  padding: 1em;
+  width: 700px;
+  border-radius: 10px;
+}
+
+.congrats-player1 {
+  color: white;
+  background-color: rgb(195, 0, 0);
+}
+
+.congrats-player2 {
+  color: whitesmoke;
+  background-color: rgb(197, 197, 3);
+}
+
+.arrow {
+  position: absolute;
+  top: 130px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+
+  border-top: 20px solid slateblue;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.541);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  background-color: blanchedalmond;
+  padding: 4em;
+  border-radius: 10px;
+}
+
+.logo img {
+  width: 500px;
+}
+
+.btn.start {
+  justify-content: center;
+  width: 100px;
+  margin: 0 auto;
+}
